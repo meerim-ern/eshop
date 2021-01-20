@@ -101,7 +101,7 @@ WSGI_APPLICATION = 'e_shop_api.wsgi.application'
 # }
 
 DATABASES = {
-    'defailt': dj_database_url.config(
+    'default': dj_database_url.config(
         default=config('DATABASE_URL')
     )
 }
