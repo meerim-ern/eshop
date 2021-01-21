@@ -1,7 +1,7 @@
 from django.urls import path, include
 # from .views import #ProductList, ProductDetail, CategoriesList, CreateProduct,\
 #     UpdateProduct, DeleteProduct
-from .views import ProductViewSet, CategoriesList
+from .views import ProductViewSet, CategoriesList, CommentCreateView
 from rest_framework.routers import  DefaultRouter
 
 products = ProductViewSet.as_view({
@@ -29,7 +29,8 @@ urlpatterns = [
     # path('', products),
     # path('<str:pk>/', products)
 
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('comments/create/', CommentCreateView.as_view()),
 
     
 ]
